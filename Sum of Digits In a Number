@@ -1,0 +1,17 @@
+Sum of Digits in a Number
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;                      \\entering the number to calculate the sum of its digits
+    int sum=0,m;
+    while(n>0)    {              \\while condition to check for the number is greater than Zero
+        m=n%10;                  \\Used to get the digit at units place digit
+        sum=sum+m;               \\ calculating the sum
+        n=n/10;                  \\ Used to remove the units place digit
+    }    
+    cout<<sum<<endl;              \\printing the sum of the digits
+    return 0;
+}
