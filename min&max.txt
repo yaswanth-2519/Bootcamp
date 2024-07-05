@@ -1,0 +1,35 @@
+min&max element in an array:-
+\\header files
+#include <iostream> 
+#include <algorithm> 
+using namespace std;
+//main block starts
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];         \\insertion of array elements
+    }
+    int min=arr[0];
+    for(int i=1;i<n;i++){
+        if(arr[i]<min){
+            min=arr[i];       \\finding minimum element in the array
+        }
+        else{
+            continue;
+        }
+    }
+    int max=arr[0];
+    for(int i=1;i<n;i++){
+        if(arr[i]>min){
+            max=arr[i];		 \\finding maximum element in the arary
+        }
+        else{
+            continue;
+        }
+    }
+    cout<<"min:"<<min<<endl;    \\printing the minimum element
+    cout<<"max:"<<max<<endl;	\\printing the maximum element
+    return 0;
+}
