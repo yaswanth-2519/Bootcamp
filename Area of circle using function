@@ -1,0 +1,15 @@
+Area of a circle:-
+
+#include <iostream>
+using namespace std;
+\\function to calculate area of circle
+float area(int r){
+    float pi=3.14;
+    float ans=pi*r*r;
+    return ans;
+}
+int main(){
+    int r;
+    cin>>r;                    \\entering the radius as required 
+    cout<<area(r)<<endl;       \\printing of the area by calling the function area()
+}
