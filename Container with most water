@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;                                        \\input array size
+	int a[n];
+	cout<<"enter the lengths of walls"<<endl;
+	for(int i=0;i<n;i++){
+	    cin>>a[i];                                   \\ taking array element from user
+	}
+	int area = 0;
+	int i=0,j=n-1;
+	while(i<j){
+	    area=max(area,min(a[j],a[i])*(j-i));         \\ finding maximum area
+      \\ incrementing i if i < j because if we move j it may decrease length
+	    if(i<j){
+	        i++;                                    
+	    }
+	    else{
+	        j--;
+	    }
+	}
+	cout<<area;                                     \\ printing final answer 
+}
